@@ -1,0 +1,108 @@
+/* 상품 상세 페이지 전체 */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #f8fcf2;
+    border-radius: 16px;
+    color: #333307;
+    box-sizing: border-box;
+}
+
+/* 상품 목록으로 돌아가기 */
+.container > a {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #596236;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.container > a:hover {
+    color: #333307;
+    text-decoration: underline;
+}
+
+/* 상품 이미지와 설명을 좌우로 배치 */
+.productDetail {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* 상품 이미지 */
+.productDetail > img {
+    width: 45%;
+    max-height: 450px;
+    object-fit: contain;
+    background-color: #f0f3e8;
+    border: 1px solid #e1e8d6;
+    border-radius: 14px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 상품 설명 영역 */
+.productDetail > div {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 상품 이름 */
+.productDetail h1 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    color: #333307;
+    line-height: 1.4;
+}
+
+/* 브랜드, 평점, 재고, 배송 */
+.productDetail p {
+    margin: 12px 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #596236;
+}
+
+/* 상품 가격 */
+.productDetail h2 {
+    margin: 25px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8dfc9;
+    font-size: 30px;
+    color: #556b2f;
+}
+
+/* 작은 화면에서는 세로 배치 */
+@media (max-width: 700px) {
+    .container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .productDetail {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .productDetail > img {
+        width: 100%;
+        max-height: 350px;
+    }
+
+    .productDetail h1 {
+        font-size: 23px;
+    }
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    padding: 2px 20px;
+    background-color: #596236;
+    color: #d9fad9;
+}
