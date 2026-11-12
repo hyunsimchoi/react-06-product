@@ -1,108 +1,75 @@
-/* 상품 상세 페이지 전체 */
+.loading,
+.empty {
+    padding: 80px 0;
+    text-align: center;
+    color: #888;
+}
+
 .container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 40px;
-    background-color: #f8fcf2;
-    border-radius: 16px;
-    color: #333307;
-    box-sizing: border-box;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 16px;
 }
 
-/* 상품 목록으로 돌아가기 */
-.container > a {
+.backBtn {
+    /* Link 부분에 걸어주는데, Link는 화면에서는 a로 그려지고
+       a 태그는 inline 요소 -> 크기가 없음
+    */
     display: inline-block;
-    margin-bottom: 30px;
-    color: #596236;
+    margin-bottom: 24px;
+    color: #2563eb;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 600;
 }
 
-.container > a:hover {
-    color: #333307;
+.backBtn:hover {
     text-decoration: underline;
 }
 
-/* 상품 이미지와 설명을 좌우로 배치 */
-.productDetail {
+.content {
     display: flex;
-    align-items: flex-start;
-    gap: 40px;
+    gap: 32px;
 }
 
-/* 상품 이미지 */
-.productDetail > img {
-    width: 45%;
-    max-height: 450px;
-    object-fit: contain;
-    background-color: #f0f3e8;
-    border: 1px solid #e1e8d6;
-    border-radius: 14px;
-    padding: 20px;
-    box-sizing: border-box;
+.image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    background-color: #f3f3f3;
 }
 
-/* 상품 설명 영역 */
-.productDetail > div {
+.info {
     flex: 1;
-    min-width: 0;
 }
 
-/* 상품 이름 */
-.productDetail h1 {
-    margin: 0 0 20px;
+.title {
     font-size: 28px;
-    color: #333307;
-    line-height: 1.4;
+    margin-bottom: 12px;
 }
 
-/* 브랜드, 평점, 재고, 배송 */
-.productDetail p {
-    margin: 12px 0;
-    font-size: 15px;
-    line-height: 1.8;
-    color: #596236;
+.description {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
 }
 
-/* 상품 가격 */
-.productDetail h2 {
-    margin: 25px 0;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #d8dfc9;
-    font-size: 30px;
-    color: #556b2f;
-}
-
-/* 작은 화면에서는 세로 배치 */
-@media (max-width: 700px) {
-    .container {
-        margin: 20px auto;
-        padding: 20px;
-    }
-
-    .productDetail {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .productDetail > img {
-        width: 100%;
-        max-height: 350px;
-    }
-
-    .productDetail h1 {
-        font-size: 23px;
-    }
+.meta {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    padding: 2px 20px;
-    background-color: #596236;
-    color: #d9fad9;
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-size: 13px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
 }
